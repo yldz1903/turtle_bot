@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🐢 Duvardan Kaçan Kaplumbağa
+#  Duvardan Kaçan Kaplumbağa
 
 **ROS 2 Humble · `turtle_duvar_py` · Turtlesim**
 
@@ -12,7 +12,7 @@
 
 ---
 
-## 📖 Hakkında
+##  Hakkında
 
 Bu paket, turtlesim'deki kaplumbağayı ileri sürer ve duvara yaklaştığında **dönerek yön değiştirmesini** sağlar. Konum bilgisi saniyede bir terminale yazdırılır.
 
@@ -22,9 +22,9 @@ Bu paket, turtlesim'deki kaplumbağayı ileri sürer ve duvara yaklaştığında
 | 2 | **Abone** | `/turtle1/pose` dinlenir, `x` ve `y` alınır |
 | 3 | **Yayıncı** | `/turtle1/cmd_vel` ile ileri sürülür; `x` veya `y` **< 1.0** ya da **> 10.0** ise döner |
 | 4 | **Log** | Konum saniyede bir `get_logger().info()` ile yazılır |
-| ⭐ | **Bonus** | Hız ve sınır değerleri ROS parametresidir |
+|  | **Bonus** | Hız ve sınır değerleri ROS parametresidir |
 
-## 🧠 Nasıl Çalışır?
+##  Nasıl Çalışır?
 
 ```
  /turtle1/pose ──▶ ┌──────────────┐ ──▶ /turtle1/cmd_vel
@@ -37,7 +37,7 @@ Bu paket, turtlesim'deki kaplumbağayı ileri sürer ve duvara yaklaştığında
 - **Sınırlar içinde:** `linear_speed` ile düz ileri gider.
 - **Sınır dışında** (`x`/`y` < `min_limit` veya > `max_limit`): Merkeze doğru dönerek yön değiştirir.
 
-## ⚙️ Parametreler (Bonus)
+##  Parametreler (Bonus)
 
 | Parametre | Varsayılan | Açıklama |
 |-----------|-----------|----------|
@@ -46,7 +46,7 @@ Bu paket, turtlesim'deki kaplumbağayı ileri sürer ve duvara yaklaştığında
 | `min_limit` | `1.0` | Alt sınır |
 | `max_limit` | `10.0` | Üst sınır |
 
-## 🚀 Kurulum
+##  Kurulum
 
 ```bash
 git clone <repo-url> turtle_bot
@@ -55,7 +55,7 @@ colcon build --packages-select turtle_duvar_py
 source install/setup.bash
 ```
 
-## ▶️ Çalıştırma
+##  Çalıştırma
 
 **Terminal 1** — Simülatör:
 ```bash
@@ -82,7 +82,7 @@ ros2 run turtle_duvar_py duvar_node --ros-args \
 [INFO] [duvar_node]: Konum: x=7.31, y=5.54
 ```
 
-## 📸 Ekran Görüntüleri
+##  Ekran Görüntüleri
 
 > Buraya ekran görüntülerini ekle (`images/` klasörüne koyup bağla):
 
@@ -91,7 +91,7 @@ ros2 run turtle_duvar_py duvar_node --ros-args \
 ![Log çıktısı](images/log.png)
 -->
 
-## 📁 Proje Yapısı
+##  Proje Yapısı
 
 ```
 turtle_bot/
@@ -106,6 +106,6 @@ turtle_bot/
             └── duvar_node.py
 ```
 
-## 📄 Lisans
+##  Lisans
 
 Apache-2.0
