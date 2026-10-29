@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🐢 Turtle Bot — Wanderer
+#  Turtle Bot — Wanderer
 
 **Turtlesim için durmadan gezinen, duvardan akıllıca kaçan ROS 2 düğümü**
 
@@ -17,12 +17,12 @@
 
 `turtlebot_wanderer`, [turtlesim](https://docs.ros.org/en/humble/Tutorials/Beginner-CLI-Tools/Introducing-Turtlesim/Introducing-Turtlesim.html) simülatöründeki kaplumbağayı **hiç durmadan** hareket ettiren basit bir ROS 2 paketidir.
 
-- 🎲 Güvenli bölgede rastgele hız ve dönüşlerle gezinir.
-- 🧱 Duvara yaklaşınca durmadan merkeze doğru yönelir.
-- 🚫 `linear.x` her zaman `> 0` — kaplumbağa asla durmaz.
-- 🛑 `Ctrl+C` ile kapatılınca kaplumbağayı düzgünce durdurur.
+-  Güvenli bölgede rastgele hız ve dönüşlerle gezinir.
+-  Duvara yaklaşınca durmadan merkeze doğru yönelir.
+-  `linear.x` her zaman `> 0` — kaplumbağa asla durmaz.
+-  `Ctrl+C` ile kapatılınca kaplumbağayı düzgünce durdurur.
 
-## 🧠 Nasıl Çalışır?
+##  Nasıl Çalışır?
 
 ```
         /turtle1/pose ──▶ ┌──────────────┐ ──▶ /turtle1/cmd_vel
@@ -32,10 +32,10 @@
 
 | Durum | Koşul | Davranış |
 |-------|-------|----------|
-| 🟢 Güvenli bölge | `2.0 ≤ x, y ≤ 9.0` | Her 1.5–2 sn'de yeni rastgele hız/dönüş |
-| 🔴 Duvara yakın | Sınırın dışında | Merkeze (5.5, 5.5) yönel + küçük rastgele sapma |
+|  Güvenli bölge | `2.0 ≤ x, y ≤ 9.0` | Her 1.5–2 sn'de yeni rastgele hız/dönüş |
+|  Duvara yakın | Sınırın dışında | Merkeze (5.5, 5.5) yönel + küçük rastgele sapma |
 
-### ⚙️ Parametreler
+###  Parametreler
 
 | Sabit | Değer | Açıklama |
 |-------|-------|----------|
@@ -44,7 +44,7 @@
 | `TURN_GAIN` | 4.5 | Merkeze dönüş kazancı |
 | `RESELECT_MIN/MAX` | 1.5 / 2.0 sn | Rastgele hareketi yenileme aralığı |
 
-## 🚀 Kurulum
+##  Kurulum
 
 **Gereksinimler:** ROS 2, `turtlesim`, Python 3.11
 
@@ -55,7 +55,7 @@ colcon build --packages-select turtlebot_wanderer
 source install/setup.bash
 ```
 
-## ▶️ Çalıştırma
+##  Çalıştırma
 
 **Terminal 1** — Simülatör:
 ```bash
@@ -68,7 +68,7 @@ source install/setup.bash
 ros2 run turtlebot_wanderer wanderer
 ```
 
-## 📁 Proje Yapısı
+##  Proje Yapısı
 
 ```
 turtle_bot/
@@ -80,14 +80,14 @@ turtle_bot/
             └── wanderer      # Ana düğüm
 ```
 
-## 📡 ROS Arayüzü
+##  ROS Arayüzü
 
 | Tür | Topic | Mesaj |
 |-----|-------|-------|
 | Subscribe | `/turtle1/pose` | `turtlesim/msg/Pose` |
 | Publish | `/turtle1/cmd_vel` | `geometry_msgs/msg/Twist` |
 
-## 📄 Lisans
+##  Lisans
 
 Apache-2.0 — detaylar için `package.xml` dosyasına bakın.
 
