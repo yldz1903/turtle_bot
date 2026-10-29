@@ -1,13 +1,12 @@
 <div align="center">
 
-#  Turtle Bot — Wanderer
+# 🐢 Duvardan Kaçan Kaplumbağa
 
-**Turtlesim için durmadan gezinen, duvardan akıllıca kaçan ROS 2 düğümü**
+**ROS 2 Humble · `turtle_duvar_py` · Turtlesim**
 
-![ROS 2](https://img.shields.io/badge/ROS_2-Humble%2B-22314E?logo=ros&logoColor=white)
-![Python](https://img.shields.io/badge/Python-3.11-3776AB?logo=python&logoColor=white)
+![ROS 2](https://img.shields.io/badge/ROS_2-Humble-22314E?logo=ros&logoColor=white)
+![Python](https://img.shields.io/badge/Python-rclpy-3776AB?logo=python&logoColor=white)
 ![License](https://img.shields.io/badge/License-Apache--2.0-green)
-![Status](https://img.shields.io/badge/status-active-brightgreen)
 
 </div>
 
@@ -15,82 +14,98 @@
 
 ## 📖 Hakkında
 
-`turtlebot_wanderer`, [turtlesim](https://docs.ros.org/en/humble/Tutorials/Beginner-CLI-Tools/Introducing-Turtlesim/Introducing-Turtlesim.html) simülatöründeki kaplumbağayı **hiç durmadan** hareket ettiren basit bir ROS 2 paketidir.
+Bu paket, turtlesim'deki kaplumbağayı ileri sürer ve duvara yaklaştığında **dönerek yön değiştirmesini** sağlar. Konum bilgisi saniyede bir terminale yazdırılır.
 
--  Güvenli bölgede rastgele hız ve dönüşlerle gezinir.
--  Duvara yaklaşınca durmadan merkeze doğru yönelir.
--  `linear.x` her zaman `> 0` — kaplumbağa asla durmaz.
--  `Ctrl+C` ile kapatılınca kaplumbağayı düzgünce durdurur.
+| # | Gereksinim | Karşılığı |
+|---|-----------|-----------|
+| 1 | **Paket** | `turtle_duvar_py` (`rclpy`, `geometry_msgs`, `turtlesim`) |
+| 2 | **Abone** | `/turtle1/pose` dinlenir, `x` ve `y` alınır |
+| 3 | **Yayıncı** | `/turtle1/cmd_vel` ile ileri sürülür; `x` veya `y` **< 1.0** ya da **> 10.0** ise döner |
+| 4 | **Log** | Konum saniyede bir `get_logger().info()` ile yazılır |
+| ⭐ | **Bonus** | Hız ve sınır değerleri ROS parametresidir |
 
-##  Nasıl Çalışır?
+## 🧠 Nasıl Çalışır?
 
 ```
-        /turtle1/pose ──▶ ┌──────────────┐ ──▶ /turtle1/cmd_vel
-        (Pose)            │   Wanderer   │     (Twist)
-                          └──────────────┘
+ /turtle1/pose ──▶ ┌──────────────┐ ──▶ /turtle1/cmd_vel
+   (Pose)          │  duvar_node  │      (Twist)
+                   └──────────────┘
+                          │
+                          └──▶ 1 sn'de bir konum logu
 ```
 
-| Durum | Koşul | Davranış |
-|-------|-------|----------|
-|  Güvenli bölge | `2.0 ≤ x, y ≤ 9.0` | Her 1.5–2 sn'de yeni rastgele hız/dönüş |
-|  Duvara yakın | Sınırın dışında | Merkeze (5.5, 5.5) yönel + küçük rastgele sapma |
+- **Sınırlar içinde:** `linear_speed` ile düz ileri gider.
+- **Sınır dışında** (`x`/`y` < `min_limit` veya > `max_limit`): Merkeze doğru dönerek yön değiştirir.
 
-###  Parametreler
+## ⚙️ Parametreler (Bonus)
 
-| Sabit | Değer | Açıklama |
-|-------|-------|----------|
-| `SAFE_MIN` / `SAFE_MAX` | 2.0 / 9.0 | Güvenli bölge sınırları |
-| `EDGE_LINEAR` | 1.5 | Duvara yakınken ileri hız |
-| `TURN_GAIN` | 4.5 | Merkeze dönüş kazancı |
-| `RESELECT_MIN/MAX` | 1.5 / 2.0 sn | Rastgele hareketi yenileme aralığı |
+| Parametre | Varsayılan | Açıklama |
+|-----------|-----------|----------|
+| `linear_speed` | `2.0` | İleri hız |
+| `angular_speed` | `4.0` | Dönüş hızı |
+| `min_limit` | `1.0` | Alt sınır |
+| `max_limit` | `10.0` | Üst sınır |
 
-##  Kurulum
-
-**Gereksinimler:** ROS 2, `turtlesim`, Python 3.11
+## 🚀 Kurulum
 
 ```bash
 git clone <repo-url> turtle_bot
 cd turtle_bot
-colcon build --packages-select turtlebot_wanderer
+colcon build --packages-select turtle_duvar_py
 source install/setup.bash
 ```
 
-##  Çalıştırma
+## ▶️ Çalıştırma
 
 **Terminal 1** — Simülatör:
 ```bash
 ros2 run turtlesim turtlesim_node
 ```
 
-**Terminal 2** — Wanderer:
+**Terminal 2** — Düğüm:
 ```bash
 source install/setup.bash
-ros2 run turtlebot_wanderer wanderer
+ros2 run turtle_duvar_py duvar_node
 ```
 
-##  Proje Yapısı
+Parametrelerle çalıştırma:
+```bash
+ros2 run turtle_duvar_py duvar_node --ros-args \
+  -p linear_speed:=3.0 -p angular_speed:=5.0 -p min_limit:=1.5 -p max_limit:=9.5
+```
+
+### Örnek log çıktısı
+
+```
+[INFO] [duvar_node]: duvar_node başladı.
+[INFO] [duvar_node]: Konum: x=5.54, y=5.54
+[INFO] [duvar_node]: Konum: x=7.31, y=5.54
+```
+
+## 📸 Ekran Görüntüleri
+
+> Buraya ekran görüntülerini ekle (`images/` klasörüne koyup bağla):
+
+<!--
+![Turtlesim](images/turtlesim.png)
+![Log çıktısı](images/log.png)
+-->
+
+## 📁 Proje Yapısı
 
 ```
 turtle_bot/
 └── src/
-    └── turtlebot_wanderer/
-        ├── CMakeLists.txt
+    └── turtle_duvar_py/
         ├── package.xml
-        └── scripts/
-            └── wanderer      # Ana düğüm
+        ├── setup.py
+        ├── setup.cfg
+        ├── resource/turtle_duvar_py
+        └── turtle_duvar_py/
+            ├── __init__.py
+            └── duvar_node.py
 ```
 
-##  ROS Arayüzü
+## 📄 Lisans
 
-| Tür | Topic | Mesaj |
-|-----|-------|-------|
-| Subscribe | `/turtle1/pose` | `turtlesim/msg/Pose` |
-| Publish | `/turtle1/cmd_vel` | `geometry_msgs/msg/Twist` |
-
-##  Lisans
-
-Apache-2.0 — detaylar için `package.xml` dosyasına bakın.
-
----
-
-<div align="center">Made with 🐢 by <b>yldz</b></div>
+Apache-2.0
