@@ -1,0 +1,7 @@
+The no-dev option is deprecated.  Use -Wno-author instead.
+CMake Warning (unused-cli):
+  Manually-specified variables were not used by the project:
+
+    PYTHON_EXECUTABLE
+
+

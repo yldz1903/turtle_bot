@@ -1,0 +1,4 @@
+Invoking command in '/Users/yldz/turtle_bot/build/turtlebot_wanderer': SHLVL=2 _=/usr/bin/env /opt/homebrew/bin/cmake --build /Users/yldz/turtle_bot/build/turtlebot_wanderer -- -j8 -l8
+Invoked command in '/Users/yldz/turtle_bot/build/turtlebot_wanderer' returned '0': SHLVL=2 _=/usr/bin/env /opt/homebrew/bin/cmake --build /Users/yldz/turtle_bot/build/turtlebot_wanderer -- -j8 -l8
+Invoking command in '/Users/yldz/turtle_bot/build/turtlebot_wanderer': SHLVL=2 _=/usr/bin/env /opt/homebrew/bin/cmake --install /Users/yldz/turtle_bot/build/turtlebot_wanderer
+Invoked command in '/Users/yldz/turtle_bot/build/turtlebot_wanderer' returned '0': SHLVL=2 _=/usr/bin/env /opt/homebrew/bin/cmake --install /Users/yldz/turtle_bot/build/turtlebot_wanderer

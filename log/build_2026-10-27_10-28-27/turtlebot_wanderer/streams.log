@@ -1,0 +1,54 @@
+[0.020s] Invoking command in '/Users/yldz/turtle_bot/build/turtlebot_wanderer': SHLVL=2 _=/usr/bin/env /opt/homebrew/bin/cmake /Users/yldz/turtle_bot/src/turtlebot_wanderer -DPYTHON_EXECUTABLE=/opt/homebrew/bin/python3.11 -DPython3_EXECUTABLE=/opt/homebrew/bin/python3.11 -Wno-dev -DCMAKE_INSTALL_PREFIX=/Users/yldz/turtle_bot/install/turtlebot_wanderer
+[0.028s] The no-dev option is deprecated.  Use -Wno-author instead.
+[0.211s] -- The C compiler identification is AppleClang 21.0.0.21000334
+[0.354s] -- The CXX compiler identification is AppleClang 21.0.0.21000334
+[0.390s] -- Detecting C compiler ABI info
+[0.588s] -- Detecting C compiler ABI info - done
+[0.608s] -- Check for working C compiler: /opt/homebrew/opt/ccache/libexec/cc - skipped
+[0.608s] -- Detecting C compile features
+[0.609s] -- Detecting C compile features - done
+[0.615s] -- Detecting CXX compiler ABI info
+[0.816s] -- Detecting CXX compiler ABI info - done
+[0.836s] -- Check for working CXX compiler: /opt/homebrew/opt/ccache/libexec/c++ - skipped
+[0.836s] -- Detecting CXX compile features
+[0.837s] -- Detecting CXX compile features - done
+[0.892s] -- Found ament_cmake: 1.3.14 (/opt/homebrew/opt/ros2-humble/share/ament_cmake/cmake)
+[1.131s] -- Found Python3: /opt/homebrew/bin/python3.11 (found version "3.11.17") found components: Interpreter
+[1.445s] -- Found rclpy: 3.3.22 (/opt/homebrew/opt/ros2-humble/share/rclpy/cmake)
+[1.460s] -- Found sensor_msgs: 4.9.2 (/opt/homebrew/opt/ros2-humble/share/sensor_msgs/cmake)
+[1.622s] -- Found rosidl_generator_c: 3.1.9 (/opt/homebrew/opt/ros2-humble/share/rosidl_generator_c/cmake)
+[1.655s] -- Found rosidl_adapter: 3.1.9 (/opt/homebrew/opt/ros2-humble/share/rosidl_adapter/cmake)
+[1.693s] -- Found rosidl_generator_cpp: 3.1.9 (/opt/homebrew/opt/ros2-humble/share/rosidl_generator_cpp/cmake)
+[1.736s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.798s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[2.047s] -- Configuring done (2.0s)
+[2.069s] -- Generating done (0.0s)
+[2.069s] CMake Warning (unused-cli):
+[2.069s]   Manually-specified variables were not used by the project:
+[2.069s] 
+[2.069s]     PYTHON_EXECUTABLE
+[2.069s] 
+[2.069s] 
+[2.091s] -- Build files have been written to: /Users/yldz/turtle_bot/build/turtlebot_wanderer
+[2.094s] Invoked command in '/Users/yldz/turtle_bot/build/turtlebot_wanderer' returned '0': SHLVL=2 _=/usr/bin/env /opt/homebrew/bin/cmake /Users/yldz/turtle_bot/src/turtlebot_wanderer -DPYTHON_EXECUTABLE=/opt/homebrew/bin/python3.11 -DPython3_EXECUTABLE=/opt/homebrew/bin/python3.11 -Wno-dev -DCMAKE_INSTALL_PREFIX=/Users/yldz/turtle_bot/install/turtlebot_wanderer
+[2.095s] Invoking command in '/Users/yldz/turtle_bot/build/turtlebot_wanderer': SHLVL=2 _=/usr/bin/env /opt/homebrew/bin/cmake --build /Users/yldz/turtle_bot/build/turtlebot_wanderer -- -j8 -l8
+[2.155s] Invoked command in '/Users/yldz/turtle_bot/build/turtlebot_wanderer' returned '0': SHLVL=2 _=/usr/bin/env /opt/homebrew/bin/cmake --build /Users/yldz/turtle_bot/build/turtlebot_wanderer -- -j8 -l8
+[2.170s] Invoking command in '/Users/yldz/turtle_bot/build/turtlebot_wanderer': SHLVL=2 _=/usr/bin/env /opt/homebrew/bin/cmake --install /Users/yldz/turtle_bot/build/turtlebot_wanderer
+[2.178s] -- Install configuration: ""
+[2.178s] -- Installing: /Users/yldz/turtle_bot/install/turtlebot_wanderer/lib/turtlebot_wanderer/wanderer
+[2.178s] -- Installing: /Users/yldz/turtle_bot/install/turtlebot_wanderer/share/ament_index/resource_index/package_run_dependencies/turtlebot_wanderer
+[2.179s] -- Installing: /Users/yldz/turtle_bot/install/turtlebot_wanderer/share/ament_index/resource_index/parent_prefix_path/turtlebot_wanderer
+[2.179s] -- Installing: /Users/yldz/turtle_bot/install/turtlebot_wanderer/share/turtlebot_wanderer/environment/ament_prefix_path.sh
+[2.180s] -- Installing: /Users/yldz/turtle_bot/install/turtlebot_wanderer/share/turtlebot_wanderer/environment/ament_prefix_path.dsv
+[2.180s] -- Installing: /Users/yldz/turtle_bot/install/turtlebot_wanderer/share/turtlebot_wanderer/environment/path.sh
+[2.181s] -- Installing: /Users/yldz/turtle_bot/install/turtlebot_wanderer/share/turtlebot_wanderer/environment/path.dsv
+[2.181s] -- Installing: /Users/yldz/turtle_bot/install/turtlebot_wanderer/share/turtlebot_wanderer/local_setup.bash
+[2.182s] -- Installing: /Users/yldz/turtle_bot/install/turtlebot_wanderer/share/turtlebot_wanderer/local_setup.sh
+[2.182s] -- Installing: /Users/yldz/turtle_bot/install/turtlebot_wanderer/share/turtlebot_wanderer/local_setup.zsh
+[2.182s] -- Installing: /Users/yldz/turtle_bot/install/turtlebot_wanderer/share/turtlebot_wanderer/local_setup.dsv
+[2.183s] -- Installing: /Users/yldz/turtle_bot/install/turtlebot_wanderer/share/turtlebot_wanderer/package.dsv
+[2.183s] -- Installing: /Users/yldz/turtle_bot/install/turtlebot_wanderer/share/ament_index/resource_index/packages/turtlebot_wanderer
+[2.184s] -- Installing: /Users/yldz/turtle_bot/install/turtlebot_wanderer/share/turtlebot_wanderer/cmake/turtlebot_wandererConfig.cmake
+[2.184s] -- Installing: /Users/yldz/turtle_bot/install/turtlebot_wanderer/share/turtlebot_wanderer/cmake/turtlebot_wandererConfig-version.cmake
+[2.184s] -- Installing: /Users/yldz/turtle_bot/install/turtlebot_wanderer/share/turtlebot_wanderer/package.xml
+[2.186s] Invoked command in '/Users/yldz/turtle_bot/build/turtlebot_wanderer' returned '0': SHLVL=2 _=/usr/bin/env /opt/homebrew/bin/cmake --install /Users/yldz/turtle_bot/build/turtlebot_wanderer

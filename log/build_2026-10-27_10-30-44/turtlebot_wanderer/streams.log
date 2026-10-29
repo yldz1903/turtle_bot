@@ -1,0 +1,21 @@
+[0.027s] Invoking command in '/Users/yldz/turtle_bot/build/turtlebot_wanderer': SHLVL=2 _=/usr/bin/env /opt/homebrew/bin/cmake --build /Users/yldz/turtle_bot/build/turtlebot_wanderer -- -j8 -l8
+[0.096s] Invoked command in '/Users/yldz/turtle_bot/build/turtlebot_wanderer' returned '0': SHLVL=2 _=/usr/bin/env /opt/homebrew/bin/cmake --build /Users/yldz/turtle_bot/build/turtlebot_wanderer -- -j8 -l8
+[0.113s] Invoking command in '/Users/yldz/turtle_bot/build/turtlebot_wanderer': SHLVL=2 _=/usr/bin/env /opt/homebrew/bin/cmake --install /Users/yldz/turtle_bot/build/turtlebot_wanderer
+[0.122s] -- Install configuration: ""
+[0.123s] -- Up-to-date: /Users/yldz/turtle_bot/install/turtlebot_wanderer/lib/turtlebot_wanderer/wanderer
+[0.123s] -- Up-to-date: /Users/yldz/turtle_bot/install/turtlebot_wanderer/share/ament_index/resource_index/package_run_dependencies/turtlebot_wanderer
+[0.123s] -- Up-to-date: /Users/yldz/turtle_bot/install/turtlebot_wanderer/share/ament_index/resource_index/parent_prefix_path/turtlebot_wanderer
+[0.123s] -- Up-to-date: /Users/yldz/turtle_bot/install/turtlebot_wanderer/share/turtlebot_wanderer/environment/ament_prefix_path.sh
+[0.123s] -- Up-to-date: /Users/yldz/turtle_bot/install/turtlebot_wanderer/share/turtlebot_wanderer/environment/ament_prefix_path.dsv
+[0.123s] -- Up-to-date: /Users/yldz/turtle_bot/install/turtlebot_wanderer/share/turtlebot_wanderer/environment/path.sh
+[0.123s] -- Up-to-date: /Users/yldz/turtle_bot/install/turtlebot_wanderer/share/turtlebot_wanderer/environment/path.dsv
+[0.123s] -- Up-to-date: /Users/yldz/turtle_bot/install/turtlebot_wanderer/share/turtlebot_wanderer/local_setup.bash
+[0.123s] -- Up-to-date: /Users/yldz/turtle_bot/install/turtlebot_wanderer/share/turtlebot_wanderer/local_setup.sh
+[0.123s] -- Up-to-date: /Users/yldz/turtle_bot/install/turtlebot_wanderer/share/turtlebot_wanderer/local_setup.zsh
+[0.124s] -- Up-to-date: /Users/yldz/turtle_bot/install/turtlebot_wanderer/share/turtlebot_wanderer/local_setup.dsv
+[0.124s] -- Installing: /Users/yldz/turtle_bot/install/turtlebot_wanderer/share/turtlebot_wanderer/package.dsv
+[0.124s] -- Up-to-date: /Users/yldz/turtle_bot/install/turtlebot_wanderer/share/ament_index/resource_index/packages/turtlebot_wanderer
+[0.124s] -- Up-to-date: /Users/yldz/turtle_bot/install/turtlebot_wanderer/share/turtlebot_wanderer/cmake/turtlebot_wandererConfig.cmake
+[0.124s] -- Up-to-date: /Users/yldz/turtle_bot/install/turtlebot_wanderer/share/turtlebot_wanderer/cmake/turtlebot_wandererConfig-version.cmake
+[0.124s] -- Up-to-date: /Users/yldz/turtle_bot/install/turtlebot_wanderer/share/turtlebot_wanderer/package.xml
+[0.126s] Invoked command in '/Users/yldz/turtle_bot/build/turtlebot_wanderer' returned '0': SHLVL=2 _=/usr/bin/env /opt/homebrew/bin/cmake --install /Users/yldz/turtle_bot/build/turtlebot_wanderer

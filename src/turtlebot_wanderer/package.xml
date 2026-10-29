@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>turtlebot_wanderer</name>
+  <version>0.0.1</version>
+  <description>Turtlesim continuous wall avoidance wanderer</description>
+  <maintainer email="yldz@example.com">yldz</maintainer>
+  <license>Apache-2.0</license>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+  <depend>rclpy</depend>
+  <depend>turtlesim</depend>
+  <depend>geometry_msgs</depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>
